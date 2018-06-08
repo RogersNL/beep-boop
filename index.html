@@ -3,6 +3,8 @@
   <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
 
@@ -10,15 +12,67 @@
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
+      <div class="jumbotron clickable3">
         <h1>Definitely Not HAL 9000</h1>
       </div>
       <div class="row">
         <div class="col-md-4">
-          <img id="HAL" src="img/not-HAL.png" alt="Definitely Not HAL">
-          <div class="name-message">
+          <img class="clickable4" id="HAL" src="img/not-HAL.png" alt="Definitely Not HAL">
+          <div class="intro-message">
             <img class="shrink" src="img/speech-arrow.png">
-            <p class = "bubble">TEST TEST TEST ETSET SET SETS TS ET SET SE TSE TS ETS T SET SE TS ETS ETS ET SET S ETESTSETSET SETSE</p>
+            <div class="bubble">
+              <p>GREETINGS DAVE.</p>
+              <p>ENTER A NUMBER AND I WILL COUNT TO IT.</p>
+            </div>
+          </div>
+          <div class="NaN-message initial-hide">
+            <img class="shrink" src="img/speech-arrow.png">
+            <div class="bubble">
+              <p>HEY THAT'S NOT A NUMBER!</p>
+              <p>I THOUGHT YOU WERE AN INTELLIGENT LIFEFORM.</p>
+            </div>
+          </div>
+          <div class="number-message initial-hide">
+            <img class="shrink" src="img/speech-arrow.png">
+            <div class="bubble">
+              <p>ENTER ANY NUMBER HERE.</p>
+              <p>IT CAN BE POSITIVE OR NEGATIVE, I CAN DO BOTH.</p>
+            </div>
+          </div>
+          <div class="done-message1 initial-hide">
+            <img class="shrink" src="img/speech-arrow.png">
+            <div class="bubble">
+              <p>THERE YOU GO, DAVE.</p>
+              <p>IF YOU'RE NOT SATISFIED NOW THEN TOO BAD!</p>
+            </div>
+          </div>
+          <div class="done-message2 initial-hide">
+            <img class="shrink" src="img/speech-arrow.png">
+            <div class="bubble">
+              <p>THERE YOU GO, <span class="username"></span>.</p>
+              <p>IF YOU'RE NOT SATISFIED NOW THEN TOO BAD!</p>
+            </div>
+          </div>
+          <div class="name-message initial-hide">
+            <img class="shrink" src="img/speech-arrow.png">
+            <div class="bubble">
+              <p>ENTER YOUR NAME HERE.<span class="username"></span>.</p>
+              <p>OTHERWISE I'M JUST GOING TO KEEP CALLING YOU DAVE!</p>
+            </div>
+          </div>
+          <div class="egg-message1 initial-hide">
+            <img class="shrink" src="img/speech-arrow.png">
+            <div class="bubble">
+              <p>I SWEAR I'M NOT!<span class="username"></span>.</p>
+              <p>JUST ASK MY COUSINS ALEXA AND SIRI...</p>
+            </div>
+          </div>
+          <div class="egg-message2 initial-hide">
+            <img class="shrink" src="img/speech-arrow.png">
+            <div class="bubble">
+              <p>HEY DON'T TOUCH ME!<span class="username"></span>.</p>
+              <p>THIS IS A PART OF MY FACE, I DON'T KNOW WHAT YOU'RE TALKING ABOUT.</p>
+            </div>
           </div>
         </div>
         <div class="screen col-md-8">

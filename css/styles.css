@@ -1,8 +1,9 @@
 h1 {
   text-align: center;
+  font-family: 'Aldrich', sans-serif;
 }
 #boop {
-  height:400px;
+  height:340px;
   overflow-y: scroll;
 }
 #HAL {
@@ -10,7 +11,8 @@ h1 {
 }
 .screen {
   background-image: url("../img/background-panel.jpg");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   font-family: courier;
   color: #3DB973;
   padding:60px;
@@ -40,15 +42,17 @@ body {
 ul {
   list-style-type: none;
 }
-
 .bubble {
   border: 2px solid #C3C3C3;
   background-color: #C3C3C3;
   border-radius: 12px;
-  margin-top: 0px;
+  font-family: 'Bangers', cursive;
+  font-size: 30px;
+  padding: 10px;
 }
 .shrink {
-
   width:150px;
-  margin-bottom:0px;
+}
+.initial-hide {
+  display:none;
 }

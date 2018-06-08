@@ -50,21 +50,99 @@ var filteredNumbers = [];
     listNumbers = [];
     filteredNumbers = [];
     var userInput = parseInt($("input#number").val());
+    var inputName = $("input#name").val();
     numberCheck(userInput);
     if (numCheck) {
       numberToArray(userInput);
       $("#boop").empty();
     } else {
-      alert("please enter a number");
+      showNaN();
     }
     replaceNumbers(listNumbers);
     displayList(filteredNumbers);
   });
+//SHOW/HIDE MESSAGE FUNCTIONS
+  function showNaN() {
+    $(".intro-message").hide();
+    $(".NaN-message").fadeIn();
+    $(".number-message").hide();
+    $(".done-message1").hide();
+    $(".done-message2").hide();
+    $(".name-message").hide();
+    $(".egg-message1").hide();
+    $(".egg-message2").hide();
+  }
+  function showDone1() {
+    $(".intro-message").hide();
+    $(".NaN-message").hide();
+    $(".number-message").hide();
+    $(".done-message1").fadeIn();
+    $(".done-message2").hide();
+    $(".name-message").hide();
+    $(".egg-message1").hide();
+    $(".egg-message2").hide();
+  }
+  function showDone2() {
+    $(".intro-message").hide();
+    $(".NaN-message").hide();
+    $(".number-message").hide();
+    $(".done-message1").hide();
+    $(".done-message2").fadeIn();
+    $(".name-message").hide();
+    $(".egg-message1").hide();
+    $(".egg-message2").hide();
+  }
+  function showName() {
+    $(".intro-message").hide();
+    $(".NaN-message").hide();
+    $(".number-message").hide();
+    $(".done-message1").hide();
+    $(".done-message2").hide();
+    $(".name-message").fadeIn();
+    $(".egg-message1").hide();
+    $(".egg-message2").hide();
+  }
+  function showNumber() {
+    $(".intro-message").hide();
+    $(".NaN-message").hide();
+    $(".number-message").fadeIn();
+    $(".done-message1").hide();
+    $(".done-message2").hide();
+    $(".name-message").hide();
+    $(".egg-message1").hide();
+    $(".egg-message2").hide();
+  }
+  function showEgg1() {
+    $(".intro-message").hide();
+    $(".NaN-message").hide();
+    $(".number-message").hide();
+    $(".done-message1").hide();
+    $(".done-message2").hide();
+    $(".name-message").hide();
+    $(".egg-message1").fadeIn();
+    $(".egg-message2").hide();
+  }
+  function showEgg2() {
+    $(".intro-message").hide();
+    $(".NaN-message").hide();
+    $(".number-message").hide();
+    $(".done-message1").hide();
+    $(".done-message2").hide();
+    $(".name-message").hide();
+    $(".egg-message1").hide();
+    $(".egg-message2").fadeIn();
+  }
 //FORM CLICK MESSAGES
   $(".clickable1").click(function() {
-    alert("name");
+    showName();
   });
   $(".clickable2").click(function() {
-    alert("number");
+    showNumber();
+  });
+  $(".clickable3").click(function(){
+    showEgg1();
+  });
+  $(".clickable4").click(function(){
+    showEgg2();
   });
 });
