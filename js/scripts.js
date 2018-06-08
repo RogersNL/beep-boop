@@ -2,6 +2,7 @@ $(document).ready(function(){
 //GLOBAL VARIABLES
 var numCheck = true;
 var listNumbers = [];
+var filteredNumbers = [];
 //FUNCTIONS
   //FUNCTION THAT FILTERS NaN
   function numberCheck(number) {
@@ -23,6 +24,19 @@ var listNumbers = [];
       $("#boop").append("<li>" + array[j] + "</li>");
     }
   }
+  //FUNCTION THAT CHECKS FOR SPECIAL CONDITIONS AND REPLACES NUMBERS IN ARRAY
+  function replaceNumbers(array) {
+    for (k = 0; k < array.length; k++)
+      if (array[k] % 3 === 0 && k !== 0) {
+        filteredNumbers.push("I'm sorry, Dave. I'm afraid I can't do that.");
+      } else if (array[k].toString().includes("1")) {
+        filteredNumbers.push("Boop!");
+      } else if (array[k].toString().includes("0")) {
+        filteredNumbers.push("Beep!");
+      } else {
+        filteredNumbers.push(array[k]);
+      }
+  }
 
   $("#form-beep").submit(function(event){
     event.preventDefault();
@@ -33,6 +47,7 @@ var listNumbers = [];
     } else {
       alert("please enter a number");
     }
-    displayList(listNumbers);
+    replaceNumbers(listNumbers);
+    displayList(filteredNumbers);
   });
 });
