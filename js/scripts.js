@@ -3,6 +3,7 @@ $(document).ready(function(){
 var numCheck = true;
 var listNumbers = [];
 var filteredNumbers = [];
+
 //FUNCTIONS
   //FUNCTION THAT FILTERS NaN
   function numberCheck(number) {
@@ -43,10 +44,9 @@ var filteredNumbers = [];
         filteredNumbers.push(array[k]);
       }
   }
-
+  //FORM SUBMIT
   $("#form-beep").submit(function(event){
     event.preventDefault();
-
     listNumbers = [];
     filteredNumbers = [];
     var userInput = parseInt($("input#number").val());
@@ -59,5 +59,12 @@ var filteredNumbers = [];
     }
     replaceNumbers(listNumbers);
     displayList(filteredNumbers);
+  });
+//FORM CLICK MESSAGES
+  $(".clickable1").click(function() {
+    alert("name");
+  });
+  $(".clickable2").click(function() {
+    alert("number");
   });
 });

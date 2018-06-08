@@ -1,0 +1,54 @@
+h1 {
+  text-align: center;
+}
+#boop {
+  height:400px;
+  overflow-y: scroll;
+}
+#HAL {
+  width:100%;
+}
+.screen {
+  background-image: url("../img/background-panel.jpg");
+  background-size: cover;
+  font-family: courier;
+  color: #3DB973;
+  padding:60px;
+  font-size:16px;
+}
+label {
+  display: inline-block;
+}
+input[class="form-control"] {
+  width: 200px;
+}
+input[type="text"] {
+  color:black;
+}
+button {
+  margin-bottom: 20px;
+  margin-top: 5px;
+  color: black;
+}
+body {
+  background-image:url("../img/stars.gif");
+}
+.jumbotron {
+  height: 100px;
+  padding-top:1px;
+}
+ul {
+  list-style-type: none;
+}
+
+.bubble {
+  border: 2px solid #C3C3C3;
+  background-color: #C3C3C3;
+  border-radius: 12px;
+  margin-top: 0px;
+}
+.shrink {
+
+  width:150px;
+  margin-bottom:0px;
+}
