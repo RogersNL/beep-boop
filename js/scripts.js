@@ -14,8 +14,14 @@ var filteredNumbers = [];
   }
   //FUNCTION THAT PUSHES 0 TO ENTERED NUMBER IN AN ARRAY
   function numberToArray(number) {
-    for (i = 0; i < number + 1; i++) {
-      listNumbers.push(i);
+    if (number >= 0) {
+      for (i = 0; i <= number; i++) {
+        listNumbers.push(i);
+      }
+    } else {
+      for (i = 0; i >= number; i--) {
+        listNumbers.push(i);
+      }
     }
   }
   //FUNCTION THAT DISPLAYS THE LIST IN HTML
