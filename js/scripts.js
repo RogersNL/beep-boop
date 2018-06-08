@@ -17,15 +17,22 @@ var listNumbers = [];
       listNumbers.push(i);
     }
   }
+  //FUNCTION THAT DISPLAYS THE LIST IN HTML
+  function displayList(array) {
+    for (j = 0; j < array.length; j++) {
+      $("#boop").append("<li>" + array[j] + "</li>");
+    }
+  }
 
   $("#form-beep").submit(function(event){
     event.preventDefault();
     var userInput = parseInt($("input#number").val());
     numberCheck(userInput);
-    numberToArray(userInput);
-    console.log(listNumbers);
     if (numCheck) {
-      $("#boop").append("<li>" + userInput + "</li>");
+      numberToArray(userInput);
+    } else {
+      alert("please enter a number");
     }
+    displayList(listNumbers);
   });
 });
