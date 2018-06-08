@@ -40,10 +40,14 @@ var filteredNumbers = [];
 
   $("#form-beep").submit(function(event){
     event.preventDefault();
+
+    listNumbers = [];
+    filteredNumbers = [];
     var userInput = parseInt($("input#number").val());
     numberCheck(userInput);
     if (numCheck) {
       numberToArray(userInput);
+      $("#boop").empty();
     } else {
       alert("please enter a number");
     }
