@@ -3,7 +3,6 @@ $(document).ready(function(){
 var numCheck = true;
 var listNumbers = [];
 var filteredNumbers = [];
-
 //FUNCTIONS
   //FUNCTION THAT FILTERS NaN
   function numberCheck(number) {
@@ -32,10 +31,10 @@ var filteredNumbers = [];
     }
   }
   //FUNCTION THAT CHECKS FOR SPECIAL CONDITIONS AND REPLACES NUMBERS IN ARRAY
-  function replaceNumbers(array) {
+  function replaceNumbers(array, name) {
     for (k = 0; k < array.length; k++)
       if (array[k] % 3 === 0 && k !== 0) {
-        filteredNumbers.push("I'm sorry, Dave. I'm afraid I can't do that.");
+        filteredNumbers.push("I'm sorry, " + name + ". I'm afraid I can't do that.");
       } else if (array[k].toString().includes("1")) {
         filteredNumbers.push("Boop!");
       } else if (array[k].toString().includes("0")) {
@@ -47,19 +46,31 @@ var filteredNumbers = [];
   //FORM SUBMIT
   $("#form-beep").submit(function(event){
     event.preventDefault();
+    //VARIABLES
     listNumbers = [];
     filteredNumbers = [];
     var userInput = parseInt($("input#number").val());
     var inputName = $("input#name").val();
+    //CHECK IF NUMBER OR NOT A NUMBER
     numberCheck(userInput);
     if (numCheck) {
       numberToArray(userInput);
       $("#boop").empty();
+      //CHECK IF USER HAS ENTERED NAME
+      if (inputName === "") {
+        replaceNumbers(listNumbers,"Dave")
+        showDone1();
+      } else {
+        replaceNumbers(listNumbers,inputName);
+        $(".username").text(inputName.toUpperCase());
+        showDone2();
+      }
     } else {
       showNaN();
     }
-    replaceNumbers(listNumbers);
+    //DISPLAY RESULT
     displayList(filteredNumbers);
+
   });
 //SHOW/HIDE MESSAGE FUNCTIONS
   function showNaN() {
@@ -139,10 +150,10 @@ var filteredNumbers = [];
   $(".clickable2").click(function() {
     showNumber();
   });
-  $(".clickable3").click(function(){
+  $(".clickable3").click(function() {
     showEgg1();
   });
-  $(".clickable4").click(function(){
+  $(".clickable4").click(function() {
     showEgg2();
   });
 });
