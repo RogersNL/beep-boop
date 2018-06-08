@@ -35,7 +35,7 @@ _
 
 ## Known Bugs
 
-_No known bugs_
+_Several graphical bugs when resizing window with jumbotron, "screen" element, and HAL image._
 
 ## Support and contact details
 
